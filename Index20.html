@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống hiển thị mã bảo mật</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0b132b; /* Nền xanh dương đậm */
+            color: #4cc9f0; /* Chữ màu xanh cyan/xanh dương sáng */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        /* Giao diện nhập mật khẩu */
+        #password-screen {
+            text-align: center;
+            background: #1c2541;
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #3a86ff;
+            box-shadow: 0 0 15px #3a86ff;
+        }
+        #password-screen h2 {
+            color: #fff;
+            margin-top: 0;
+            font-family: Arial, sans-serif;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px solid #4cc9f0;
+            background: #0b132b;
+            color: #4cc9f0;
+            border-radius: 4px;
+            outline: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3a86ff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #4cc9f0;
+            color: #0b132b;
+            box-shadow: 0 0 10px #4cc9f0;
+        }
+        #error-msg {
+            color: #ff007f;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        /* Giao diện hiển thị mã */
+        #display-screen {
+            display: none; 
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+        }
+        #container {
+            border: 2px solid #3a86ff;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #1c2541;
+            box-shadow: 0 0 15px #3a86ff;
+            margin-top: 20px;
+            max-height: 70vh;
+            overflow-y: auto; 
+        }
+        .code-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            border-bottom: 1px dotted #3a86ff;
+            padding-bottom: 8px;
+            font-size: 22px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .code-text {
+            font-weight: bold;
+        }
+        .copy-btn {
+            padding: 4px 10px;
+            font-size: 13px;
+            background-color: #3a86ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            background-color: #4cc9f0;
+            color: #0b132b;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MÀN HÌNH NHẬP MẬT KHẨU -->
+    <div id="password-screen">
+        <h2>HỆ THỐNG BẢO MẬT</h2>
+        <p style="color: #cbd5e1;">Vui lòng nhập mã truy cập để giải mã dữ liệu</p>
+        <input type="password" id="pwd-input" placeholder="Nhập mật khẩu..." onkeydown="checkEnter(event)">
+        <button onclick="verifyPassword()">XÁC NHẬN</button>
+        <div id="error-msg"></div>
+    </div>
+
+    <!-- MÀN HÌNH HIỂN THỊ MÃ -->
+    <div id="display-screen">
+        <h2 style="color: #fff; font-family: Arial, sans-serif;">Dữ liệu đang được trích xuất...</h2>
+        <div id="container"></div>
+    </div>
+
+    <script>
+        // Danh sách mã bảo mật của bạn
+        const danhSachMa = [
+            "4qy3jkoh8", "tw91p0bnh", "jed9dldyk", "mheznv9zv", "z9ued12hr",
+            "p3vq6oft7", "wz6zky21i", "2vjamfslg", "ljxxj0et7", "5twn1f9ri"
+        ];
+
+        let index = 0;
+        let timer = null;
+
+        function checkEnter(event) {
+            if (event.key === "Enter") {
+                verifyPassword();
+            }
+        }
+
+        function verifyPassword() {
+            const inputVal = document.getElementById("pwd-input").value;
+            const errorMsg = document.getElementById("error-msg");
+
+            if (inputVal === "2105") {
+                document.getElementById("password-screen").style.display = "none";
+                document.getElementById("display-screen").style.display = "block";
+                chayHienThi();
+            } else {
+                errorMsg.innerText = "❌ Sai mật khẩu! Vui lòng thử lại.";
+                document.getElementById("pwd-input").value = "";
+                document.getElementById("pwd-input").focus();
+            }
+        }
+
+        // Hàm xử lý sao chép mã vào bộ nhớ tạm
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerText;
+                button.innerText = "Đã chép! ✓";
+                button.style.backgroundColor = "#4cc9f0";
+                button.style.color = "#0b132b";
+                
+                // Trở lại chữ "Sao chép" ban đầu sau 1.5 giây
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.style.backgroundColor = "#3a86ff";
+                    button.style.color = "white";
+                }, 1500);
+            }).catch(err => {
+                alert("Không thể sao chép mã này!");
+            });
+        }
+
+        function chayHienThi() {
+            const container = document.getElementById("container");
+
+            function hienThiMoi() {
+                if (index < danhSachMa.length) {
+                    const currentCode = danhSachMa[index];
+
+                    // Tạo hàng chứa mã và nút
+                    const itemDiv = document.createElement("div");
+                    itemDiv.className = "code-item";
+
+                    // Phần hiển thị số thứ tự và nội dung mã
+                    const textSpan = document.createElement("span");
+                    textSpan.className = "code-text";
+                    textSpan.innerText = `${index + 1}. ${currentCode}`;
+
+                    // Tạo nút sao chép riêng biệt
+                    const copyBtn = document.createElement("button");
+                    copyBtn.className = "copy-btn";
+                    copyBtn.innerText = "Sao chép";
+                    copyBtn.onclick = function() {
+                        copyToClipboard(currentCode, this);
+                    };
+
+                    // Ghép chữ và nút vào hàng, rồi đưa vào khung chứa
+                    itemDiv.appendChild(textSpan);
+                    itemDiv.appendChild(copyBtn);
+                    container.appendChild(itemDiv);
+                    
+                    container.scrollTop = container.scrollHeight;
+                    index++;
+                } else {
+                    clearInterval(timer);
+                }
+            }
+
+            // Hiển thị ngay mã đầu tiên
+            hienThiMoi();
+
+            // Cứ mỗi 5 giây (5000ms) hiện thêm mã tiếp theo
+            timer = setInterval(hienThiMoi, 5000);
+        }
+    </script>
+
+</body>
+</html>

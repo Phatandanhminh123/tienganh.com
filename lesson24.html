@@ -1,0 +1,562 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English 6 - Lesson 24: My Neighbourhood</title>
+<style>
+:root {
+  --primary: #2457a7;
+  --secondary: #eaf2ff;
+  --green: #18794e;
+  --red: #c0392b;
+  --border: #d7dfeb;
+  --text: #243247;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f6fb;
+  color: var(--text);
+  line-height: 1.7;
+}
+.container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 22px rgba(0,0,0,.07);
+}
+header {
+  background: linear-gradient(135deg, #2457a7, #477fca);
+  color: white;
+  padding: 28px 22px;
+  border-radius: 14px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+header h1 { margin: 0 0 8px; font-size: 27px; }
+header p { margin: 5px 0; }
+h2 {
+  color: var(--primary);
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 8px;
+  margin-top: 30px;
+}
+h3 { color: #315d91; margin-top: 22px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 10px;
+  text-align: left;
+}
+th { background: var(--secondary); color: #173d77; }
+tr:nth-child(even) td { background: #fafcff; }
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  margin: 16px 0;
+  background: #fff;
+}
+.formula {
+  padding: 14px;
+  background: var(--secondary);
+  border-left: 5px solid var(--primary);
+  border-radius: 7px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+.question {
+  padding: 14px 0;
+  border-bottom: 1px solid #e6eaf0;
+}
+.question:last-child { border-bottom: none; }
+.question p { margin: 0 0 8px; font-weight: 600; }
+input[type="text"] {
+  width: 100%;
+  max-width: 520px;
+  padding: 10px 12px;
+  border: 1px solid #b9c6d8;
+  border-radius: 7px;
+  font-size: 16px;
+}
+.options label {
+  display: block;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.options input { margin-right: 8px; }
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 8px 6px 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+}
+button:hover { opacity: .88; }
+button.secondary { background: #64748b; }
+button.green { background: var(--green); }
+.feedback { margin-top: 8px; font-weight: 600; }
+.correct { color: var(--green); }
+.incorrect { color: var(--red); }
+.answer {
+  display: none;
+  background: #edf9f1;
+  border-left: 4px solid var(--green);
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+.reading {
+  background: #f8faff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  font-size: 17px;
+}
+textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border: 1px solid #b9c6d8;
+  border-radius: 8px;
+  font: inherit;
+  resize: vertical;
+}
+.small { color: #59677b; font-size: 14px; }
+.word-count { font-weight: bold; margin-top: 8px; }
+footer {
+  text-align: center;
+  color: #64748b;
+  border-top: 1px solid var(--border);
+  margin-top: 30px;
+  padding-top: 18px;
+}
+@media (max-width: 600px) {
+  .container { margin: 0; padding: 14px; border-radius: 0; }
+  header h1 { font-size: 22px; }
+  th, td { padding: 7px; font-size: 14px; }
+  button { padding: 10px 12px; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <h1>TIẾNG ANH 6 – GLOBAL SUCCESS</h1>
+  <h2 style="color:white;border:0;margin:8px 0">
+    Lesson 24: Unit 4 – My Neighbourhood (Part 3)
+  </h2>
+  <p>Thời lượng: 90 phút | Hình thức: Dạy kèm 1:1</p>
+  <p>Comparative adjectives · Vocabulary · Reading · Writing · Speaking</p>
+</header>
+
+<h2>I. Objectives – Mục tiêu bài học</h2>
+<p>Sau bài học, học sinh có thể:</p>
+<ul>
+  <li>Nhớ và sử dụng từ vựng về khu phố.</li>
+  <li>Thành lập câu so sánh hơn với tính từ ngắn và tính từ dài.</li>
+  <li>So sánh hai địa điểm bằng câu hoàn chỉnh.</li>
+  <li>Đọc hiểu đoạn văn ngắn và viết đoạn văn khoảng 50–70 từ về khu phố của mình.</li>
+</ul>
+
+<h2>II. Vocabulary – Từ vựng</h2>
+<table>
+<thead><tr><th>English</th><th>Nghĩa tiếng Việt</th><th>Cách đọc gần đúng</th></tr></thead>
+<tbody>
+<tr><td>neighbourhood</td><td>Khu phố</td><td>nây-bờ-hút</td></tr>
+<tr><td>peaceful</td><td>Yên bình</td><td>piis-phồ</td></tr>
+<tr><td>noisy</td><td>Ồn ào</td><td>noi-zi</td></tr>
+<tr><td>crowded</td><td>Đông đúc</td><td>krau-đid</td></tr>
+<tr><td>quiet</td><td>Yên tĩnh</td><td>quai-ợt</td></tr>
+<tr><td>convenient</td><td>Thuận tiện</td><td>kần-vi-ni-ầnt</td></tr>
+<tr><td>modern</td><td>Hiện đại</td><td>mo-đần</td></tr>
+<tr><td>friendly</td><td>Thân thiện</td><td>fren-đli</td></tr>
+<tr><td>clean</td><td>Sạch sẽ</td><td>kliin</td></tr>
+<tr><td>expensive</td><td>Đắt đỏ</td><td>ik-spen-siv</td></tr>
+<tr><td>pollution</td><td>Sự ô nhiễm</td><td>pờ-lu-shần</td></tr>
+<tr><td>city centre</td><td>Trung tâm thành phố</td><td>si-ti sen-tờ</td></tr>
+</tbody>
+</table>
+<p class="small">Lưu ý: Cách đọc tiếng Việt chỉ gần đúng để hỗ trợ ghi nhớ, không thay thế hoàn toàn phát âm tiếng Anh chuẩn.</p>
+
+<h2>III. Grammar – Comparative adjectives</h2>
+
+<h3>1. So sánh hơn với tính từ ngắn</h3>
+<div class="formula">S + be + adjective-er + than + ...</div>
+<p><b>Ví dụ:</b></p>
+<ul>
+  <li>My street is <b>cleaner than</b> your street.<br>
+  Đường phố của tôi sạch hơn đường phố của bạn.</li>
+  <li>This neighbourhood is <b>quieter than</b> the city centre.<br>
+  Khu phố này yên tĩnh hơn trung tâm thành phố.</li>
+</ul>
+<table>
+<tr><th>Tính từ</th><th>So sánh hơn</th><th>Nghĩa</th></tr>
+<tr><td>small</td><td>smaller</td><td>nhỏ hơn</td></tr>
+<tr><td>tall</td><td>taller</td><td>cao hơn</td></tr>
+<tr><td>clean</td><td>cleaner</td><td>sạch hơn</td></tr>
+<tr><td>noisy</td><td>noisier</td><td>ồn ào hơn</td></tr>
+<tr><td>big</td><td>bigger</td><td>to hơn</td></tr>
+<tr><td>hot</td><td>hotter</td><td>nóng hơn</td></tr>
+</table>
+
+<h3>2. So sánh hơn với tính từ dài</h3>
+<div class="formula">S + be + more + adjective + than + ...</div>
+<p><b>Ví dụ:</b></p>
+<ul>
+  <li>This street is <b>more crowded than</b> that street.</li>
+  <li>My neighbourhood is <b>more peaceful than</b> the city centre.</li>
+</ul>
+<table>
+<tr><th>Tính từ</th><th>So sánh hơn</th><th>Nghĩa</th></tr>
+<tr><td>beautiful</td><td>more beautiful</td><td>đẹp hơn</td></tr>
+<tr><td>expensive</td><td>more expensive</td><td>đắt hơn</td></tr>
+<tr><td>convenient</td><td>more convenient</td><td>thuận tiện hơn</td></tr>
+<tr><td>peaceful</td><td>more peaceful</td><td>yên bình hơn</td></tr>
+</table>
+
+<h3>3. Các dạng đặc biệt</h3>
+<table>
+<tr><th>Tính từ</th><th>So sánh hơn</th></tr>
+<tr><td>good</td><td>better</td></tr>
+<tr><td>bad</td><td>worse</td></tr>
+<tr><td>far</td><td>farther / further</td></tr>
+</table>
+
+<h2>IV. Practice – Bài tập</h2>
+
+<div class="card" id="exercise1">
+<h3>Exercise 1 – Complete the sentences</h3>
+<p>Điền dạng so sánh hơn thích hợp vào chỗ trống.</p>
+
+<div class="question">
+<p>1. My neighbourhood is (quiet) ______ than the city centre.</p>
+<input type="text" id="e1q1" placeholder="Nhập đáp án">
+<div class="feedback" id="e1f1"></div>
+</div>
+<div class="question">
+<p>2. This street is (wide) ______ than that street.</p>
+<input type="text" id="e1q2" placeholder="Nhập đáp án">
+<div class="feedback" id="e1f2"></div>
+</div>
+<div class="question">
+<p>3. The city centre is (crowded) ______ than my village.</p>
+<input type="text" id="e1q3" placeholder="Nhập đáp án">
+<div class="feedback" id="e1f3"></div>
+</div>
+<div class="question">
+<p>4. This house is (big) ______ than my old house.</p>
+<input type="text" id="e1q4" placeholder="Nhập đáp án">
+<div class="feedback" id="e1f4"></div>
+</div>
+<div class="question">
+<p>5. My new school is (good) ______ than my old school.</p>
+<input type="text" id="e1q5" placeholder="Nhập đáp án">
+<div class="feedback" id="e1f5"></div>
+</div>
+<div class="question">
+<p>6. The streets here are (clean) ______ than before.</p>
+<input type="text" id="e1q6" placeholder="Nhập đáp án">
+<div class="feedback" id="e1f6"></div>
+</div>
+<div class="question">
+<p>7. This shop is (expensive) ______ than that one.</p>
+<input type="text" id="e1q7" placeholder="Nhập đáp án">
+<div class="feedback" id="e1f7"></div>
+</div>
+<div class="question">
+<p>8. Life in the countryside is (peaceful) ______ than life in a big city.</p>
+<input type="text" id="e1q8" placeholder="Nhập đáp án">
+<div class="feedback" id="e1f8"></div>
+</div>
+
+<button onclick="checkExercise1()">Kiểm tra đáp án</button>
+<button class="green" onclick="showAnswers1()">Hiện đáp án</button>
+<button class="secondary" onclick="resetExercise1()">Làm lại</button>
+<div id="e1score" class="feedback"></div>
+<div id="e1answers" class="answer">
+<b>Đáp án:</b><br>
+1. quieter<br>2. wider<br>3. more crowded<br>4. bigger<br>
+5. better<br>6. cleaner<br>7. more expensive<br>8. more peaceful
+</div>
+</div>
+
+<div class="card" id="exercise2">
+<h3>Exercise 2 – Choose the correct answer</h3>
+<p>Chọn đáp án đúng nhất.</p>
+
+<div class="question">
+<p>1. My house is _____ than yours.</p>
+<div class="options">
+<label><input type="radio" name="e2q1" value="a"> a) big</label>
+<label><input type="radio" name="e2q1" value="b"> b) bigger</label>
+<label><input type="radio" name="e2q1" value="c"> c) more big</label>
+</div>
+<div class="feedback" id="e2f1"></div>
+</div>
+<div class="question">
+<p>2. This park is _____ than that park.</p>
+<div class="options">
+<label><input type="radio" name="e2q2" value="a"> a) more beautiful</label>
+<label><input type="radio" name="e2q2" value="b"> b) beautifuler</label>
+<label><input type="radio" name="e2q2" value="c"> c) beautifuller</label>
+</div>
+<div class="feedback" id="e2f2"></div>
+</div>
+<div class="question">
+<p>3. Today is _____ than yesterday.</p>
+<div class="options">
+<label><input type="radio" name="e2q3" value="a"> a) hotter</label>
+<label><input type="radio" name="e2q3" value="b"> b) hoter</label>
+<label><input type="radio" name="e2q3" value="c"> c) more hot</label>
+</div>
+<div class="feedback" id="e2f3"></div>
+</div>
+<div class="question">
+<p>4. The countryside is _____ than the city centre.</p>
+<div class="options">
+<label><input type="radio" name="e2q4" value="a"> a) peacefuller</label>
+<label><input type="radio" name="e2q4" value="b"> b) more peaceful</label>
+<label><input type="radio" name="e2q4" value="c"> c) peacefuler</label>
+</div>
+<div class="feedback" id="e2f4"></div>
+</div>
+<div class="question">
+<p>5. This road is _____ than the old road.</p>
+<div class="options">
+<label><input type="radio" name="e2q5" value="a"> a) wider</label>
+<label><input type="radio" name="e2q5" value="b"> b) more wide</label>
+<label><input type="radio" name="e2q5" value="c"> c) wideer</label>
+</div>
+<div class="feedback" id="e2f5"></div>
+</div>
+
+<button onclick="checkExercise2()">Kiểm tra đáp án</button>
+<button class="green" onclick="showAnswers2()">Hiện đáp án</button>
+<button class="secondary" onclick="resetExercise2()">Làm lại</button>
+<div id="e2score" class="feedback"></div>
+<div id="e2answers" class="answer">
+<b>Đáp án:</b><br>
+1. b) bigger<br>2. a) more beautiful<br>3. a) hotter<br>
+4. b) more peaceful<br>5. a) wider
+</div>
+</div>
+
+<h2>V. Reading – Đọc hiểu</h2>
+<div class="reading">
+<h3>My Neighbourhood</h3>
+I live in a small neighbourhood in the countryside. It is quiet and peaceful. There is a school, a market and a beautiful park near my house. The streets are cleaner than those in the city centre. People here are friendly and helpful. The houses are smaller than those in big cities, but life is less stressful. I love my neighbourhood because it is a wonderful place to live.
+</div>
+
+<h3>Questions</h3>
+<div class="card">
+<p>1. Where does the writer live?</p>
+<p>2. What places are near the writer’s house?</p>
+<p>3. Are the streets cleaner than those in the city centre?</p>
+<p>4. What are the people like?</p>
+<p>5. Why does the writer love the neighbourhood?</p>
+<button class="green" onclick="toggleAnswer('readingAnswers', this)">Hiện đáp án</button>
+<div class="answer" id="readingAnswers">
+1. The writer lives in a small neighbourhood in the countryside.<br><br>
+2. There are a school, a market and a beautiful park near the writer’s house.<br><br>
+3. Yes, they are.<br><br>
+4. They are friendly and helpful.<br><br>
+5. Because it is a wonderful place to live.
+</div>
+</div>
+
+<h2>VI. Writing – Viết đoạn văn</h2>
+<div class="card">
+<h3>Topic</h3>
+<p>Write a paragraph of 50–70 words about your neighbourhood.</p>
+<h3>Gợi ý</h3>
+<ul>
+<li>Where do you live?</li>
+<li>Is your neighbourhood quiet or noisy?</li>
+<li>What places are near your house?</li>
+<li>What is better about your neighbourhood?</li>
+<li>Why do you like it?</li>
+</ul>
+<h3>Useful sentence patterns</h3>
+<ul>
+<li>I live in …</li>
+<li>My neighbourhood is … and …</li>
+<li>There is a … near my house.</li>
+<li>My neighbourhood is quieter/cleaner than …</li>
+<li>The people are …</li>
+<li>I like my neighbourhood because …</li>
+</ul>
+<h3>Your paragraph – Đoạn văn của em</h3>
+<textarea id="writing" placeholder="Write your paragraph here..."></textarea>
+<div class="word-count" id="wordCount">Số từ: 0</div>
+<button onclick="countWords()">Đếm số từ</button>
+<button class="green" onclick="toggleAnswer('modelAnswer', this)">Hiện đoạn văn mẫu</button>
+<div class="answer" id="modelAnswer">
+<b>Model paragraph:</b><br><br>
+My neighbourhood is small and peaceful. It is quieter than the city centre. There are some shops, a school and a park near my house. The streets are cleaner than before, and the people are friendlier than those in other places. I love my neighbourhood because it is a comfortable place to live.
+</div>
+</div>
+
+<h2>VII. Speaking – Luyện nói</h2>
+<div class="card">
+<p>Trả lời bằng câu hoàn chỉnh:</p>
+<ol>
+<li>Is your neighbourhood quiet or noisy?</li>
+<li>Is your neighbourhood cleaner than the city centre?</li>
+<li>What is the most convenient place near your house?</li>
+<li>Do you like living in your neighbourhood? Why?</li>
+</ol>
+<p><b>Challenge:</b> So sánh khu phố của em với thành phố hoặc vùng nông thôn bằng ít nhất ba câu có <i>than</i>.</p>
+<button class="green" onclick="toggleAnswer('speakingAnswers', this)">Hiện câu trả lời gợi ý</button>
+<div class="answer" id="speakingAnswers">
+1. My neighbourhood is quiet and peaceful.<br><br>
+2. Yes, it is. My neighbourhood is cleaner than the city centre.<br><br>
+3. The market is the most convenient place near my house.<br><br>
+4. Yes, I do, because it is peaceful and the people are friendly.
+</div>
+</div>
+
+<h2>VIII. Lesson schedule – Phân bổ 90 phút</h2>
+<table>
+<tr><th>Thời gian</th><th>Hoạt động</th></tr>
+<tr><td>10 phút</td><td>Ôn từ vựng</td></tr>
+<tr><td>20 phút</td><td>Học cấu trúc so sánh hơn</td></tr>
+<tr><td>20 phút</td><td>Làm bài tập ngữ pháp</td></tr>
+<tr><td>15 phút</td><td>Đọc hiểu</td></tr>
+<tr><td>15 phút</td><td>Viết đoạn văn</td></tr>
+<tr><td>10 phút</td><td>Luyện nói và chữa lỗi</td></tr>
+</table>
+
+<h2>Homework – Bài tập về nhà</h2>
+<ul>
+<li>Học thuộc 12 từ vựng trong bài.</li>
+<li>Viết 8 câu so sánh hơn về khu phố của em.</li>
+<li>Viết một đoạn văn 50–70 từ về khu phố của mình.</li>
+<li>Đọc đoạn văn thành tiếng 3 lần, chú ý phát âm đuôi <b>-er</b>, <b>-ier</b> và từ <b>than</b>.</li>
+</ul>
+
+<footer>
+English 6 – Global Success | Lesson 24: My Neighbourhood
+</footer>
+</div>
+
+<script>
+const answers1 = [
+  ["quieter"], ["wider"], ["more crowded"], ["bigger"],
+  ["better"], ["cleaner"], ["more expensive"], ["more peaceful"]
+];
+
+function normalize(text) {
+  return text.trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+function checkExercise1() {
+  let score = 0;
+  answers1.forEach((accepted, i) => {
+    const input = document.getElementById("e1q" + (i + 1));
+    const feedback = document.getElementById("e1f" + (i + 1));
+    const value = normalize(input.value);
+    if (accepted.includes(value)) {
+      score++;
+      feedback.textContent = "✓ Chính xác!";
+      feedback.className = "feedback correct";
+    } else {
+      feedback.textContent = "✗ Chưa chính xác. Hãy thử lại hoặc xem đáp án.";
+      feedback.className = "feedback incorrect";
+    }
+  });
+  document.getElementById("e1score").textContent =
+    "Kết quả: " + score + "/" + answers1.length + " câu đúng.";
+}
+
+function showAnswers1() {
+  document.getElementById("e1answers").style.display = "block";
+}
+
+function resetExercise1() {
+  for (let i = 1; i <= 8; i++) {
+    document.getElementById("e1q" + i).value = "";
+    const feedback = document.getElementById("e1f" + i);
+    feedback.textContent = "";
+    feedback.className = "feedback";
+  }
+  document.getElementById("e1score").textContent = "";
+  document.getElementById("e1answers").style.display = "none";
+}
+
+const answers2 = ["b", "a", "a", "b", "a"];
+
+function checkExercise2() {
+  let score = 0;
+  answers2.forEach((answer, i) => {
+    const selected = document.querySelector(
+      'input[name="e2q' + (i + 1) + '"]:checked'
+    );
+    const feedback = document.getElementById("e2f" + (i + 1));
+    if (selected && selected.value === answer) {
+      score++;
+      feedback.textContent = "✓ Chính xác!";
+      feedback.className = "feedback correct";
+    } else {
+      feedback.textContent = "✗ Chưa chính xác. Hãy thử lại hoặc xem đáp án.";
+      feedback.className = "feedback incorrect";
+    }
+  });
+  document.getElementById("e2score").textContent =
+    "Kết quả: " + score + "/" + answers2.length + " câu đúng.";
+}
+
+function showAnswers2() {
+  document.getElementById("e2answers").style.display = "block";
+}
+
+function resetExercise2() {
+  for (let i = 1; i <= 5; i++) {
+    document.querySelectorAll('input[name="e2q' + i + '"]').forEach(input => {
+      input.checked = false;
+    });
+    const feedback = document.getElementById("e2f" + i);
+    feedback.textContent = "";
+    feedback.className = "feedback";
+  }
+  document.getElementById("e2score").textContent = "";
+  document.getElementById("e2answers").style.display = "none";
+}
+
+function toggleAnswer(id, button) {
+  const box = document.getElementById(id);
+  const isHidden = getComputedStyle(box).display === "none";
+  box.style.display = isHidden ? "block" : "none";
+  button.textContent = isHidden ? "Ẩn đáp án" :
+    (id === "modelAnswer" ? "Hiện đoạn văn mẫu" :
+    id === "speakingAnswers" ? "Hiện câu trả lời gợi ý" : "Hiện đáp án");
+}
+
+function countWords() {
+  const text = document.getElementById("writing").value.trim();
+  const count = text ? text.split(/\s+/).length : 0;
+  document.getElementById("wordCount").textContent = "Số từ: " + count;
+}
+
+document.getElementById("writing").addEventListener("input", countWords);
+</script>
+</body>
+</html>
+```
