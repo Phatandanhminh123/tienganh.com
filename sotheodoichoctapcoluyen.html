@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thông báo học sinh</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px 12px;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #263445;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px #00000015;
+}
+
+.header {
+    background: #1769aa;
+    color: white;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    background: white;
+    color: #1769aa;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.header p {
+    margin: 6px 0 0;
+    font-size: 12px;
+}
+
+.content {
+    padding: 22px;
+}
+
+h1 {
+    text-align: center;
+    color: #d71920;
+    font-size: 25px;
+    margin: 5px 0 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-weight: bold;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 16px 0 7px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #1769aa;
+}
+
+button {
+    border: 0;
+    border-radius: 7px;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary {
+    background: #1769aa;
+    color: white;
+}
+
+.secondary {
+    background: #e8edf3;
+    color: #334155;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    flex: 1;
+}
+
+#result {
+    display: none;
+    margin-top: 28px;
+    border: 1px solid #dbe3ed;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+#result h2 {
+    text-align: center;
+    color: #d71920;
+    font-size: 23px;
+}
+
+.result-subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.result-line {
+    margin: 16px 0;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.result-label {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.result-value {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+
+.reason-box {
+    background: #fff5f5;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    padding: 13px;
+    border-radius: 7px;
+}
+
+.notice-footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    .header, .form-area, .buttons, .screen-only {
+        display: none !important;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    #result {
+        display: block !important;
+        border: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <div class="logo">!</div>
+        <div>
+            <h2>THÔNG BÁO HỌC SINH</h2>
+            <p>Mẫu ghi nhận thông tin và nề nếp</p>
+        </div>
+    </header>
+
+    <main class="content">
+
+        <h1>❗ THÔNG BÁO ❗</h1>
+        <div class="subtitle">
+            MẪU THÔNG BÁO GHI NHẬN NỀ NẾP HỌC SINH
+        </div>
+
+        <div class="form-area">
+            <div class="section-title">Thông tin thông báo</div>
+
+            <label for="date">Ngày thông báo</label>
+            <input type="date" id="date" value="2026-10-21">
+
+            <label for="student">Tên học sinh</label>
+            <input id="student"
+                   placeholder="Nhập tên học sinh...">
+
+            <label for="className">Lớp</label>
+            <input id="className"
+                   placeholder="Ví dụ: 11A2">
+
+            <label for="teacher">Giáo viên</label>
+            <input id="teacher"
+                   placeholder="Ví dụ: Cô Luyến">
+
+            <label for="reason">Lý do</label>
+            <textarea id="reason"
+                      placeholder="Nhập lý do..."></textarea>
+
+            <label for="note">Ghi chú thêm (không bắt buộc)</label>
+            <textarea id="note"
+                      placeholder="Nhập ghi chú nếu có..."></textarea>
+
+            <div class="buttons">
+                <button class="primary" onclick="createNotice()">
+                    Tạo thông báo
+                </button>
+                <button class="secondary" onclick="resetForm()">
+                    Làm mới
+                </button>
+            </div>
+        </div>
+
+        <section id="result" aria-live="polite">
+            <h2>❗ THÔNG BÁO ❗</h2>
+            <div class="result-subtitle">
+                MẪU GHI NHẬN NỀ NẾP HỌC SINH
+            </div>
+            <div id="resultContent"></div>
+
+            <div class="notice-footer">
+                Đây là mẫu HTML minh họa, không phải thông báo
+                được phát hành hoặc xác nhận bởi VNEDU hay nhà trường.
+            </div>
+        </section>
+
+        <div class="buttons screen-only">
+            <button class="primary" onclick="printNotice()">
+                🖨️ In thông báo
+            </button>
+        </div>
+
+    </main>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+function createNotice() {
+    const date = $("date").value;
+    const student = $("student").value.trim();
+    const className = $("className").value.trim();
+    const teacher = $("teacher").value.trim();
+    const reason = $("reason").value.trim();
+    const note = $("note").value.trim();
+
+    if (!date || !student || !className || !teacher || !reason) {
+        alert("Cậu hãy điền ngày, tên học sinh, lớp, giáo viên và lý do nhé!");
+        return;
+    }
+
+    const formattedDate = date.split("-").reverse().join("/");
+
+    const content = $("resultContent");
+    content.replaceChildren();
+
+    function addLine(label, value, special = false) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "result-line";
+
+        const labelElement = document.createElement("span");
+        labelElement.className = "result-label";
+        labelElement.textContent = label;
+
+        const valueElement = document.createElement("div");
+        valueElement.className = "result-value";
+        valueElement.textContent = value;
+
+        if (special) {
+            valueElement.className += " reason-box";
+        }
+
+        wrapper.append(labelElement, valueElement);
+        content.appendChild(wrapper);
+    }
+
+    addLine("Ngày thông báo", formattedDate);
+    addLine("Tên học sinh", student);
+    addLine("Lớp", className);
+    addLine("Giáo viên", teacher);
+    addLine("Lý do", reason, true);
+
+    if (note) {
+        addLine("Ghi chú thêm", note);
+    }
+
+    $("result").style.display = "block";
+    $("result").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function resetForm() {
+    $("date").value = "2026-10-21";
+    $("student").value = "";
+    $("className").value = "";
+    $("teacher").value = "";
+    $("reason").value = "";
+    $("note").value = "";
+    $("result").style.display = "none";
+    $("student").focus();
+}
+
+function printNotice() {
+    if ($("result").style.display !== "block") {
+        alert("Cậu hãy tạo thông báo trước khi in nhé!");
+        return;
+    }
+
+    window.print();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thông báo học sinh</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    padding: 20px;
+    margin: 0;
+}
+.container {
+    max-width: 550px;
+    margin: auto;
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #0002;
+}
+h1 {
+    color: #d71920;
+    text-align: center;
+    font-size: 25px;
+}
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    margin-top: 16px;
+    font-weight: bold;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 7px;
+    background: #1769aa;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+#result {
+    display: none;
+    margin-top: 25px;
+    border: 1px solid #ddd;
+    padding: 18px;
+    line-height: 1.8;
+}
+#result h2 {
+    color: #d71920;
+    text-align: center;
+}
+@media print {
+    body { background: white; padding: 0; }
+    .container { box-shadow: none; }
+    .form-area, .print-btn, .subtitle { display: none; }
+    #result { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>❗ THÔNG BÁO ❗</h1>
+    <div class="subtitle">Mẫu ghi nhận nề nếp học sinh</div>
+
+    <div class="form-area">
+        <label>Ngày thông báo</label>
+        <input type="date" id="date" value="2026-10-21">
+
+        <label>Tên học sinh</label>
+        <input id="name" placeholder="Nhập tên học sinh...">
+
+        <label>Lớp</label>
+        <input id="className" placeholder="Ví dụ: 11A2">
+
+        <label>Lý do</label>
+        <textarea id="reason"
+        placeholder="Nhập lý do ghi nhận..."></textarea>
+
+        <label>Ghi chú thêm (không bắt buộc)</label>
+        <textarea id="note"
+        placeholder="Nhập nội dung bổ sung..."></textarea>
+
+        <button onclick="createNotice()">Tạo thông báo</button>
+    </div>
+
+    <div id="result"></div>
+
+    <button class="print-btn" onclick="window.print()">
+        🖨️ In thông báo
+    </button>
+</div>
+
+<script>
+function createNotice() {
+    const date = document.getElementById("date").value;
+    const name = document.getElementById("name").value.trim();
+    const className = document.getElementById("className").value.trim();
+    const reason = document.getElementById("reason").value.trim();
+    const note = document.getElementById("note").value.trim();
+
+    if (!date || !name || !className || !reason) {
+        alert("Cậu hãy điền ngày, tên, lớp và lý do nhé!");
+        return;
+    }
+
+    const formatDate = date.split("-").reverse().join("/");
+
+    const result = document.getElementById("result");
+    result.replaceChildren();
+
+    function addLine(label, value) {
+        const p = document.createElement("p");
+        const strong = document.createElement("strong");
+        strong.textContent = label + ": ";
+        p.append(strong, document.createTextNode(value));
+        result.appendChild(p);
+    }
+
+    const title = document.createElement("h2");
+    title.textContent = "❗ THÔNG BÁO ❗";
+    result.appendChild(title);
+
+    addLine("Ngày", formatDate);
+    addLine("Tên học sinh", name);
+    addLine("Lớp", className);
+    addLine("Lý do", reason);
+
+    if (note) addLine("Ghi chú", note);
+
+    const footer = document.createElement("p");
+    footer.textContent = "Mẫu thông báo minh họa, không phải văn bản chính thức của VNEDU.";
+    result.appendChild(footer);
+
+    result.style.display = "block";
+}
+</script>
+
+</body>
+</html>
