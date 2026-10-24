@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 25 – English 6 Global Success</title>
+<style>
+:root{--bg:#f4f7fb;--panel:#fff;--text:#182230;--muted:#64748b;--accent:#4f46e5;--accent2:#06b6d4;--line:#e2e8f0;--good:#15803d;--bad:#b91c1c;--soft:#eef2ff}
+body.dark{--bg:#0b1120;--panel:#121c2e;--text:#e5edf8;--muted:#a8b6ca;--accent:#818cf8;--accent2:#22d3ee;--line:#29364b;--good:#4ade80;--bad:#f87171;--soft:#202947}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;transition:background .2s,color .2s}
+header{background:linear-gradient(120deg,#312e81,#4f46e5,#0891b2);color:white;padding:28px 18px 22px}
+.header-inner{max-width:1100px;margin:auto}
+.eyebrow{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+h1{margin:6px 0;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2}
+header p{margin:8px 0 0;opacity:.92}
+.toolbar{max-width:1100px;margin:0 auto;padding:14px 18px;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.progress-wrap{flex:1;min-width:180px}
+.progress-label{font-size:.85rem;color:var(--muted);display:flex;justify-content:space-between}
+.progress{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:5px}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .2s}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:9px 14px;background:var(--panel);color:var(--text);font-weight:650}
+button:hover{filter:brightness(.97);transform:translateY(-1px)}
+button.primary{background:var(--accent);color:white;border-color:var(--accent)}
+button:disabled{opacity:.4;cursor:not-allowed;transform:none}
+main{max-width:1100px;margin:0 auto;padding:0 18px 30px;display:grid;grid-template-columns:245px minmax(0,1fr);gap:20px}
+nav,.content-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 24px #00000008}
+nav{padding:14px;height:max-content;position:sticky;top:12px}
+.nav-title{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:6px 10px}
+.nav-item{display:block;width:100%;text-align:left;border:0;background:transparent;padding:10px;border-radius:10px;font-weight:600;color:var(--muted)}
+.nav-item.active{background:var(--soft);color:var(--accent)}
+.content-card{padding:clamp(18px,3vw,32px);min-height:480px}
+.section{display:none}.section.active{display:block}
+h2{font-size:1.65rem;line-height:1.25;margin:0 0 10px}
+h3{margin:24px 0 8px;font-size:1.15rem}
+.lead{color:var(--muted);margin-top:0}
+.callout{border-left:4px solid var(--accent);background:var(--soft);padding:14px 16px;border-radius:0 12px 12px 0;margin:16px 0}
+.formula{font-weight:750;font-size:1.05rem;letter-spacing:.01em}
+table{border-collapse:collapse;width:100%;margin:12px 0 18px;display:table}
+th,td{padding:10px 12px;border:1px solid var(--line);text-align:left}
+th{background:var(--soft)}
+.table-wrap{overflow-x:auto}
+ul,ol{padding-left:24px}
+.word-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.word{border:1px solid var(--line);border-radius:12px;padding:12px}
+.word strong{display:block}.translation{color:var(--muted);font-size:.92rem}
+.question{padding:16px;border:1px solid var(--line);border-radius:14px;margin:14px 0}
+.question legend{font-weight:700;padding:0 5px}
+.options{display:grid;gap:8px;margin-top:8px}
+.option{display:flex;gap:10px;align-items:flex-start;padding:9px 11px;border:1px solid var(--line);border-radius:10px;cursor:pointer}
+.option:has(input:checked){border-color:var(--accent);background:var(--soft)}
+input[type=radio]{margin-top:6px;accent-color:var(--accent)}
+input[type=text],textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--text);font:inherit}
+.feedback{font-weight:650;margin-top:8px}.correct{color:var(--good)}.incorrect{color:var(--bad)}
+.actions{display:flex;justify-content:space-between;gap:10px;margin-top:24px;flex-wrap:wrap}
+.score-box{background:var(--soft);border-radius:14px;padding:18px;margin:16px 0}
+.answer-key{border:1px dashed var(--line);padding:14px;border-radius:12px;margin:12px 0}
+.hidden{display:none!important}
+footer{text-align:center;color:var(--muted);padding:16px;font-size:.88rem}
+@media(max-width:760px){main{grid-template-columns:1fr}nav{position:static;display:grid;grid-template-columns:1fr 1fr;gap:4px}.nav-title{grid-column:1/-1}.content-card{min-height:0}table{font-size:.9rem}}
+@media print{header,.toolbar,nav,.actions,#themeBtn{display:none!important}main{display:block;max-width:none;padding:0}.content-card{border:0;box-shadow:none}.section{display:block!important;page-break-inside:avoid}body{background:white;color:black}}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="eyebrow">English 6 · Global Success</div>
+    <h1>Lesson 25: Comparative Adjectives (Part 2)</h1>
+    <p>Unit 4 – My Neighbourhood · 90-minute lesson · Basic to Intermediate</p>
+  </div>
+</header>
+<div class="toolbar">
+  <div class="progress-wrap">
+    <div class="progress-label"><span id="progressText">Page 1 of 8</span><span id="progressPercent">13%</span></div>
+    <div class="progress"><span id="progressBar"></span></div>
+  </div>
+  <button id="themeBtn" type="button">🌙 Dark mode</button>
+</div>
+<main>
+<nav aria-label="Lesson sections">
+  <div class="nav-title">Lesson menu</div>
+  <button class="nav-item active" data-page="0">1. Objectives</button>
+  <button class="nav-item" data-page="1">2. Grammar</button>
+  <button class="nav-item" data-page="2">3. Vocabulary</button>
+  <button class="nav-item" data-page="3">4. Exercise 1</button>
+  <button class="nav-item" data-page="4">5. Exercises 2–3</button>
+  <button class="nav-item" data-page="5">6. Speaking</button>
+  <button class="nav-item" data-page="6">7. Writing</button>
+  <button class="nav-item" data-page="7">8. Answers & homework</button>
+</nav>
+<div class="content-card">
+<section class="section active">
+  <h2>I. Lesson objectives</h2>
+  <p class="lead">By the end of this lesson, you will be able to:</p>
+  <ul>
+    <li>Understand and use comparative adjectives.</li>
+    <li>Distinguish between short and long adjectives.</li>
+    <li>Use comparative adjectives to describe people and places.</li>
+    <li>Write grammatically correct comparative sentences.</li>
+  </ul>
+  <div class="callout"><strong>Today's key idea</strong><br>Use comparative adjectives to compare two people, things, or places.</div>
+  <h3>Lesson map</h3>
+  <div class="word-grid">
+    <div class="word"><strong>Grammar</strong><span class="translation">-er / more + adjective</span></div>
+    <div class="word"><strong>Vocabulary</strong><span class="translation">Neighbourhood and places</span></div>
+    <div class="word"><strong>Practice</strong><span class="translation">Choose, rewrite, arrange</span></div>
+    <div class="word"><strong>Production</strong><span class="translation">Speaking and a short paragraph</span></div>
+  </div>
+</section>
+<section class="section">
+  <h2>II. Grammar: Comparative adjectives</h2>
+  <h3>1. Short adjectives</h3>
+  <div class="callout"><div class="formula">Subject + be + adjective-er + than + noun/pronoun</div></div>
+  <ul>
+    <li>My house is <strong>smaller than</strong> your house.</li>
+    <li>A car is <strong>faster than</strong> a bike.</li>
+    <li>Lan is <strong>taller than</strong> Hoa.</li>
+  </ul>
+  <h3>2. Long adjectives</h3>
+  <div class="callout"><div class="formula">Subject + be + more + adjective + than + noun/pronoun</div></div>
+  <ul>
+    <li>This street is <strong>more beautiful than</strong> that street.</li>
+    <li>English is <strong>more interesting than</strong> Maths.</li>
+    <li>This exercise is <strong>more difficult than</strong> that exercise.</li>
+  </ul>
+  <h3>3. Spelling rules</h3>
+  <div class="table-wrap"><table><thead><tr><th>Adjective</th><th>Comparative</th><th>Rule</th></tr></thead><tbody>
+  <tr><td>tall</td><td>taller</td><td>Add -er</td></tr><tr><td>small</td><td>smaller</td><td>Add -er</td></tr><tr><td>nice</td><td>nicer</td><td>Add -r</td></tr><tr><td>large</td><td>larger</td><td>Add -r</td></tr><tr><td>big</td><td>bigger</td><td>Double the final consonant</td></tr><tr><td>hot</td><td>hotter</td><td>Double the final consonant</td></tr><tr><td>happy</td><td>happier</td><td>Change y to i and add -er</td></tr><tr><td>easy</td><td>easier</td><td>Change y to i and add -er</td></tr>
+  </tbody></table></div>
+  <h3>4. Irregular adjectives</h3>
+  <div class="table-wrap"><table><thead><tr><th>Adjective</th><th>Comparative</th><th>Vietnamese</th></tr></thead><tbody><tr><td>good</td><td>better</td><td>tốt hơn</td></tr><tr><td>bad</td><td>worse</td><td>tệ hơn</td></tr><tr><td>far</td><td>farther / further</td><td>xa hơn</td></tr></tbody></table></div>
+  <div class="callout"><strong>Common mistake</strong><br>Incorrect: My brother is <del>more taller</del> than me.<br>Correct: My brother is <strong>taller than</strong> me.</div>
+</section>
+<section class="section">
+  <h2>III. Vocabulary</h2>
+  <p class="lead">Learn these adjectives and their Vietnamese meanings.</p>
+  <div class="word-grid">
+    <div class="word"><strong>crowded</strong><span class="translation">đông đúc</span></div>
+    <div class="word"><strong>peaceful</strong><span class="translation">yên bình</span></div>
+    <div class="word"><strong>noisy</strong><span class="translation">ồn ào</span></div>
+    <div class="word"><strong>quiet</strong><span class="translation">yên tĩnh</span></div>
+    <div class="word"><strong>convenient</strong><span class="translation">thuận tiện</span></div>
+    <div class="word"><strong>expensive</strong><span class="translation">đắt đỏ</span></div>
+    <div class="word"><strong>cheap</strong><span class="translation">rẻ</span></div>
+    <div class="word"><strong>modern</strong><span class="translation">hiện đại</span></div>
+    <div class="word"><strong>beautiful</strong><span class="translation">đẹp</span></div>
+    <div class="word"><strong>friendly</strong><span class="translation">thân thiện</span></div>
+  </div>
+</section>
+<section class="section">
+  <h2>IV. Exercise 1: Choose the correct answer</h2>
+  <p class="lead">Choose one answer for each question, then press “Check answers”. Each question is worth 1 point.</p>
+  <form id="quiz1">
+    <fieldset class="question"><legend>1. My brother is _____ than me. (tall)</legend><div class="options">
+      <label class="option"><input type="radio" name="q1" value="A"> A. taller</label><label class="option"><input type="radio" name="q1" value="B"> B. more tall</label><label class="option"><input type="radio" name="q1" value="C"> C. tallest</label></div><div class="feedback" id="f1"></div></fieldset>
+    <fieldset class="question"><legend>2. This bag is _____ than that bag. (expensive)</legend><div class="options">
+      <label class="option"><input type="radio" name="q2" value="A"> A. expensiver</label><label class="option"><input type="radio" name="q2" value="B"> B. more expensive</label><label class="option"><input type="radio" name="q2" value="C"> C. most expensive</label></div><div class="feedback" id="f2"></div></fieldset>
+    <fieldset class="question"><legend>3. Today is _____ than yesterday. (hot)</legend><div class="options">
+      <label class="option"><input type="radio" name="q3" value="A"> A. hoter</label><label class="option"><input type="radio" name="q3" value="B"> B. hotter</label><label class="option"><input type="radio" name="q3" value="C"> C. more hot</label></div><div class="feedback" id="f3"></div></fieldset>
+    <fieldset class="question"><legend>4. My village is _____ than the city. (peaceful)</legend><div class="options">
+      <label class="option"><input type="radio" name="q4" value="A"> A. peacefuler</label><label class="option"><input type="radio" name="q4" value="B"> B. more peaceful</label><label class="option"><input type="radio" name="q4" value="C"> C. most peaceful</label></div><div class="feedback" id="f4"></div></fieldset>
+    <fieldset class="question"><legend>5. Maths is _____ for me than English. (difficult)</legend><div class="options">
+      <label class="option"><input type="radio" name="q5" value="A"> A. difficulter</label><label class="option"><input type="radio" name="q5" value="B"> B. more difficult</label><label class="option"><input type="radio" name="q5" value="C"> C. difficultest</label></div><div class="feedback" id="f5"></div></fieldset>
+    <fieldset class="question"><legend>6. This book is _____ than that book. (good)</legend><div class="options">
+      <label class="option"><input type="radio" name="q6" value="A"> A. gooder</label><label class="option"><input type="radio" name="q6" value="B"> B. better</label><label class="option"><input type="radio" name="q6" value="C"> C. more good</label></div><div class="feedback" id="f6"></div></fieldset>
+    <fieldset class="question"><legend>7. A bicycle is _____ than a motorbike. (slow)</legend><div class="options">
+      <label class="option"><input type="radio" name="q7" value="A"> A. slower</label><label class="option"><input type="radio" name="q7" value="B"> B. more slow</label><label class="option"><input type="radio" name="q7" value="C"> C. slowest</label></div><div class="feedback" id="f7"></div></fieldset>
+    <fieldset class="question"><legend>8. My new school is _____ than my old school. (big)</legend><div class="options">
+      <label class="option"><input type="radio" name="q8" value="A"> A. biger</label><label class="option"><input type="radio" name="q8" value="B"> B. bigger</label><label class="option"><input type="radio" name="q8" value="C"> C. more big</label></div><div class="feedback" id="f8"></div></fieldset>
+    <fieldset class="question"><legend>9. This street is _____ than that street. (noisy)</legend><div class="options">
+      <label class="option"><input type="radio" name="q9" value="A"> A. noisyer</label><label class="option"><input type="radio" name="q9" value="B"> B. noisier</label><label class="option"><input type="radio" name="q9" value="C"> C. more noisier</label></div><div class="feedback" id="f9"></div></fieldset>
+    <fieldset class="question"><legend>10. Life in the countryside is _____ than life in the city for some people. (cheap)</legend><div class="options">
+      <label class="option"><input type="radio" name="q10" value="A"> A. cheaper</label><label class="option"><input type="radio" name="q10" value="B"> B. more cheap</label><label class="option"><input type="radio" name="q10" value="C"> C. cheapest</label></div><div class="feedback" id="f10"></div></fieldset>
+    <button type="button" class="primary" onclick="checkQuiz1()">Check answers</button>
+    <button type="button" onclick="resetQuiz1()">Try again</button>
+    <div id="score1" class="score-box hidden" aria-live="polite"></div>
+  </form>
+</section>
+<section class="section">
+  <h2>V. Exercises 2–3</h2>
+  <h3>Exercise 2. Rewrite the sentences using comparative adjectives</h3>
+  <p class="lead">Write your answers in the boxes. Use “Show sample answers” to check your work.</p>
+  <div class="question"><label for="r1"><strong>1.</strong> My house is small. Your house is big. (small)</label><input id="r1" type="text" placeholder="My house is ..."></div>
+  <div class="question"><label for="r2"><strong>2.</strong> This film is interesting. That film is boring. (interesting)</label><input id="r2" type="text" placeholder="This film is ..."></div>
+  <div class="question"><label for="r3"><strong>3.</strong> Lan is 150 cm tall. Hoa is 145 cm tall. (tall)</label><input id="r3" type="text" placeholder="Lan is ..."></div>
+  <div class="question"><label for="r4"><strong>4.</strong> A bike costs 2 million VND. A motorbike costs 20 million VND. (cheap)</label><input id="r4" type="text" placeholder="A bike is ..."></div>
+  <div class="question"><label for="r5"><strong>5.</strong> The weather yesterday was 25°C. Today it is 32°C. (hot)</label><input id="r5" type="text" placeholder="Today is ..."></div>
+  <h3>Exercise 3. Arrange the words to make correct sentences</h3>
+  <div class="question"><label for="a1"><strong>1.</strong> my / than / school / bigger / is / your school</label><input id="a1" type="text" placeholder="Type the sentence"></div>
+  <div class="question"><label for="a2"><strong>2.</strong> more / this / convenient / neighbourhood / is</label><input id="a2" type="text" placeholder="Type the sentence"></div>
+  <div class="question"><label for="a3"><strong>3.</strong> than / quieter / the countryside / is / the city</label><input id="a3" type="text" placeholder="Type the sentence"></div>
+  <div class="question"><label for="a4"><strong>4.</strong> English / easier / Maths / than / is / for me</label><input id="a4" type="text" placeholder="Type the sentence"></div>
+  <div class="question"><label for="a5"><strong>5.</strong> is / better / this restaurant / that restaurant / than</label><input id="a5" type="text" placeholder="Type the sentence"></div>
+  <button class="primary" type="button" onclick="toggleAnswers('rewriteAnswers')">Show sample answers</button>
+  <div id="rewriteAnswers" class="answer-key hidden">
+    <strong>Exercise 2</strong>
+    <ol><li>My house is smaller than your house.</li><li>This film is more interesting than that film.</li><li>Lan is taller than Hoa.</li><li>A bike is cheaper than a motorbike.</li><li>Today is hotter than yesterday.</li></ol>
+    <strong>Exercise 3</strong>
+    <ol><li>My school is bigger than your school.</li><li>This neighbourhood is more convenient.</li><li>The countryside is quieter than the city.</li><li>English is easier than Maths for me.</li><li>This restaurant is better than that restaurant.</li></ol>
+    <p><em>Note: The PDF's sample answer for Exercise 3, sentence 2, is “This neighbourhood is more convenient.”</em></p>
+  </div>
+</section>
+<section class="section">
+  <h2>VI. Speaking practice</h2>
+  <p class="lead">Answer each question in a complete sentence. You can compare your response with the suggested answer.</p>
+  <div class="question"><strong>1. Is the countryside quieter than the city?</strong><p><button type="button" onclick="toggleAnswers('s1')">Show suggested answer</button></p><div id="s1" class="answer-key hidden">Yes, it is. The countryside is quieter than the city.</div></div>
+  <div class="question"><strong>2. Is the city more crowded than the countryside?</strong><p><button type="button" onclick="toggleAnswers('s2')">Show suggested answer</button></p><div id="s2" class="answer-key hidden">Yes, it is. The city is more crowded than the countryside.</div></div>
+  <div class="question"><strong>3. Is your house bigger than your friend's house?</strong><p><button type="button" onclick="toggleAnswers('s3')">Show suggested answer</button></p><div id="s3" class="answer-key hidden">No, it isn't. My house is smaller than my friend's house.</div></div>
+</section>
+<section class="section">
+  <h2>VII. Writing</h2>
+  <p><strong>Topic:</strong> Compare life in the city and life in the countryside.</p>
+  <p>Write a paragraph of 50–70 words. Use at least three comparative adjectives.</p>
+  <label for="paragraph"><strong>Your paragraph</strong></label>
+  <textarea id="paragraph" rows="7" placeholder="Write your 50–70 word paragraph here..."></textarea>
+  <p id="wordCount" class="lead">Word count: 0</p>
+  <button type="button" class="primary" onclick="toggleAnswers('writingSample')">Show sample paragraph</button>
+  <div id="writingSample" class="answer-key hidden">Life in the city is different from life in the countryside. The city is more crowded and noisier than the countryside. There are more shops and restaurants in the city. However, the countryside is quieter and more peaceful. Houses in the countryside are sometimes cheaper than houses in the city. I prefer the countryside because I like a quiet life.</div>
+</section>
+<section class="section">
+  <h2>VIII. Answer key & homework</h2>
+  <h3>Exercise 1 answer key</h3>
+  <div class="table-wrap"><table><thead><tr><th>Question</th><th>Answer</th><th>Comparative form</th></tr></thead><tbody>
+  <tr><td>1</td><td>A</td><td>taller</td></tr><tr><td>2</td><td>B</td><td>more expensive</td></tr><tr><td>3</td><td>B</td><td>hotter</td></tr><tr><td>4</td><td>B</td><td>more peaceful</td></tr><tr><td>5</td><td>B</td><td>more difficult</td></tr><tr><td>6</td><td>B</td><td>better</td></tr><tr><td>7</td><td>A</td><td>slower</td></tr><tr><td>8</td><td>B</td><td>bigger</td></tr><tr><td>9</td><td>B</td><td>noisier</td></tr><tr><td>10</td><td>A</td><td>cheaper</td></tr>
+  </tbody></table></div>
+  <h3>Homework</h3>
+  <ol><li>Learn the vocabulary and comparative adjective forms.</li><li>Write ten comparative sentences about your school, family, or neighbourhood.</li><li>Write a paragraph of 50–70 words comparing two places you know.</li></ol>
+  <h3>Lesson timing (90 minutes)</h3>
+  <div class="table-wrap"><table><thead><tr><th>Activity</th><th>Time</th></tr></thead><tbody><tr><td>Warm-up</td><td>5 minutes</td></tr><tr><td>Grammar review</td><td>15 minutes</td></tr><tr><td>Vocabulary</td><td>10 minutes</td></tr><tr><td>Exercises</td><td>25 minutes</td></tr><tr><td>Speaking practice</td><td>15 minutes</td></tr><tr><td>Writing</td><td>15 minutes</td></tr><tr><td>Consolidation</td><td>5 minutes</td></tr><tr><th>Total</th><th>90 minutes</th></tr></tbody></table></div>
+  <div class="callout">Great work! Review the spelling rules and remember: do not use <strong>more</strong> and <strong>-er</strong> together for the same adjective.</div>
+</section>
+<div class="actions">
+  <button id="prevBtn" type="button">← Previous</button>
+  <button id="nextBtn" type="button" class="primary">Next →</button>
+</div>
+</div>
+</main>
+<footer>Lesson 25 · English 6 Global Success · Save this file and open it in any modern browser.</footer>
+<script>
+const sections=[...document.querySelectorAll('.section')];
+const navItems=[...document.querySelectorAll('.nav-item')];
+let current=0;
+function showPage(index){
+  current=Math.max(0,Math.min(sections.length-1,index));
+  sections.forEach((s,i)=>s.classList.toggle('active',i===current));
+  navItems.forEach((b,i)=>b.classList.toggle('active',i===current));
+  document.getElementById('prevBtn').disabled=current===0;
+  document.getElementById('nextBtn').disabled=current===sections.length-1;
+  const pct=Math.round(((current+1)/sections.length)*100);
+  document.getElementById('progressText').textContent=`Page ${current+1} of ${sections.length}`;
+  document.getElementById('progressPercent').textContent=`${pct}%`;
+  document.getElementById('progressBar').style.width=pct+'%';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+navItems.forEach(b=>b.addEventListener('click',()=>showPage(Number(b.dataset.page))));
+document.getElementById('prevBtn').addEventListener('click',()=>showPage(current-1));
+document.getElementById('nextBtn').addEventListener('click',()=>showPage(current+1));
+document.getElementById('themeBtn').addEventListener('click',()=>{
+  document.body.classList.toggle('dark');
+  const dark=document.body.classList.contains('dark');
+  document.getElementById('themeBtn').textContent=dark?'☀️ Light mode':'🌙 Dark mode';
+});
+const key={q1:'A',q2:'B',q3:'B',q4:'B',q5:'B',q6:'B',q7:'A',q8:'B',q9:'B',q10:'A'};
+function checkQuiz1(){
+  let score=0;
+  for(let i=1;i<=10;i++){
+    const name='q'+i, chosen=document.querySelector(`input[name="${name}"]:checked`);
+    const feedback=document.getElementById('f'+i);
+    feedback.className='feedback';
+    if(chosen&&chosen.value===key[name]){score++;feedback.textContent='Correct!';feedback.classList.add('correct')}
+    else{feedback.textContent=chosen?`Not quite. Correct answer: ${key[name]}.`:`Please choose an answer. Correct answer: ${key[name]}.`;feedback.classList.add('incorrect')}
+  }
+  const box=document.getElementById('score1');
+  box.classList.remove('hidden');
+  box.innerHTML=`<strong>Your score: ${score}/10 (${score*10}%)</strong><br>${score===10?'Excellent! Perfect score.':score>=7?'Good job! Review any answers you missed.':'Keep practising. Review the grammar section and try again.'}`;
+}
+function resetQuiz1(){
+  document.getElementById('quiz1').reset();
+  for(let i=1;i<=10;i++){const f=document.getElementById('f'+i);f.textContent='';f.className='feedback'}
+  document.getElementById('score1').classList.add('hidden');
+}
+function toggleAnswers(id){document.getElementById(id).classList.toggle('hidden')}
+const paragraph=document.getElementById('paragraph');
+paragraph.addEventListener('input',()=>{
+ const text=paragraph.value.trim();
+ const count=text?text.split(/\s+/).length:0;
+ document.getElementById('wordCount').textContent=`Word count: ${count}${count<50?' (aim for 50–70 words)':count>70?' (try to keep it within 50–70 words)':' ✓ within the target range'}`;
+});
+showPage(0);
+</script>
+</body>
+</html>
