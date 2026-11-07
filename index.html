@@ -3,31 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tienganh.com | Kho bài học</title>
+<title>tienganh.com</title>
 <style>
 :root{--bg:#f4f6fb;--card:#fff;--text:#202538;--muted:#697187;--border:#e1e5ef;--primary:#635bff;--soft:#eeedff}
 body.dark{--bg:#111421;--card:#1b2030;--text:#f2f4ff;--muted:#aab1c7;--border:#343a50;--primary:#aaa4ff;--soft:#292743}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif;transition:.2s}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif;transition:.2s}
 header{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
 .nav{max-width:1100px;margin:auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-size:1.2rem;font-weight:bold}
 .logo{background:linear-gradient(135deg,#8178ff,#5148db);color:white;border-radius:12px;width:40px;height:40px;display:grid;place-items:center}
 button,.nav-link{border:1px solid var(--border);background:var(--card);color:var(--text);padding:10px 13px;border-radius:10px;cursor:pointer;font-size:14px;text-decoration:none}
 .hero{background:linear-gradient(125deg,#635bff,#8874ed,#3caec9);color:white;padding:45px 18px}
-.hero-inner{max-width:1100px;margin:auto}.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.1;margin:15px 0}
-.hero p{max-width:650px;line-height:1.7}.search{width:100%;max-width:620px;padding:15px;margin-top:20px;border:0;border-radius:12px;font-size:16px;outline:none}
-main{max-width:1100px;margin:auto;padding:30px 18px 55px}.section-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.hero-inner{max-width:1100px;margin:auto}
+.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.1;margin:15px 0}
+.hero p{max-width:650px;line-height:1.7}
+.search{width:100%;max-width:620px;padding:15px;margin-top:20px;border:0;border-radius:12px;font-size:16px;outline:none}
+main{max-width:1100px;margin:auto;padding:30px 18px 55px}
+.section-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
 .section-title h2{margin:0}.muted{color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
 .lesson{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;display:flex;flex-direction:column;min-height:185px;box-shadow:0 8px 22px #151a3510;transition:.2s}
 .lesson:hover{transform:translateY(-3px);border-color:var(--primary)}
-.lesson-top{display:flex;align-items:center;justify-content:space-between}.lesson-icon{font-size:24px;background:var(--soft);padding:9px;border-radius:12px}
+.lesson-top{display:flex;align-items:center;justify-content:space-between}
+.lesson-icon{font-size:24px;background:var(--soft);padding:9px;border-radius:12px}
 .tag{font-size:12px;font-weight:bold;color:var(--primary);background:var(--soft);padding:6px 9px;border-radius:20px}
-.lesson h3{margin:15px 0 6px;font-size:17px}.lesson p{color:var(--muted);font-size:14px;line-height:1.5}
+.lesson h3{margin:15px 0 6px;font-size:17px}
+.lesson p{color:var(--muted);font-size:14px;line-height:1.5}
 .open-btn{margin-top:auto;display:block;background:var(--primary);color:white;text-align:center;text-decoration:none;font-weight:bold;padding:11px;border-radius:10px}
-body.dark .open-btn{color:#17152b}.open-btn:hover{opacity:.85}
+body.dark .open-btn{color:#17152b}
 .archive{margin-top:35px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px}
-.archive summary{font-weight:bold;cursor:pointer;font-size:17px}.file-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+.archive summary{font-weight:bold;cursor:pointer;font-size:17px}
+.file-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
 .file-link{display:block;padding:12px;background:var(--bg);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;overflow-wrap:anywhere;font-size:14px}
 .file-link:hover{border-color:var(--primary);color:var(--primary)}
 .empty{display:none;text-align:center;padding:25px;color:var(--muted)}
@@ -37,71 +44,152 @@ footer{text-align:center;padding:22px;border-top:1px solid var(--border);color:v
 </style>
 </head>
 <body>
-<header><div class="nav">
+<header>
+<div class="nav">
 <a class="brand" href="index.html"><span class="logo">A+</span>tienganh.com</a>
-<div><a class="nav-link" href="#archive">📂 Kho lưu trữ</a> <button id="themeBtn" aria-label="Đổi giao diện">🌙</button></div>
-</div></header>
-<section class="hero"><div class="hero-inner">
-<div>📚 ENGLISH 6 · GLOBAL SUCCESS</div>
-<h1>Kho bài học<br>tiếng Anh dành cho thầy cô và học sinh</h1>
-<p>Tìm bài học nhanh chóng và bấm nút để mở file HTML ngay trong repository.</p>
-<input class="search" id="search" type="search" placeholder="🔍 Tìm kiếm bài học..." aria-label="Tìm kiếm bài học">
-</div></section>
-<main>
-<div class="section-title"><div><h2>📘 Bài học</h2><p class="muted">Chọn bài học rồi bấm “Mở file”.</p></div><span class="muted" id="count">11 bài học</span></div>
-<div class="grid" id="lessonGrid">
-<article class="lesson" data-search="lesson 30 review vocabulary grammar reading writing"><div class="lesson-top"><span class="lesson-icon">📝</span><span class="tag">LESSON 30</span></div><h3>Review</h3><p>Ôn tập từ vựng, các thì cơ bản, cấu trúc câu và kỹ năng tiếng Anh.</p><a class="open-btn" href="English6_Lesson_30.html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 28 natural wonders viet nam"><div class="lesson-top"><span class="lesson-icon">🏞️</span><span class="tag">LESSON 28</span></div><h3>Natural Wonders of Viet Nam</h3><p>Từ vựng và ngữ pháp must / mustn’t.</p><a class="open-btn" href="English6_Lesson_28.html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 27 my neighbourhood"><div class="lesson-top"><span class="lesson-icon">🏘️</span><span class="tag">LESSON 27</span></div><h3>My Neighbourhood · Part 1</h3><p>Từ vựng và tính từ so sánh hơn.</p><a class="open-btn" href="English6_Lesson_27.html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 26 my neighbourhood"><div class="lesson-top"><span class="lesson-icon">🏡</span><span class="tag">LESSON 26</span></div><h3>My Neighbourhood</h3><p>Từ vựng và tính từ so sánh hơn.</p><a class="open-btn" href="English6_Lesson_26.html">Mở file ↗</a></article>
-<article class="lesson" data-search="index 20"><div class="lesson-top"><span class="lesson-icon">📑</span><span class="tag">INDEX 20</span></div><h3>Index 20</h3><p>Mở file Index20.html.</p><a class="open-btn" href="Index20.html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 21"><div class="lesson-top"><span class="lesson-icon">📘</span><span class="tag">LESSON 21</span></div><h3>Lesson 21</h3><p>Mở file Lesson 21.html.</p><a class="open-btn" href="Lesson%2021.html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 21 1"><div class="lesson-top"><span class="lesson-icon">📗</span><span class="tag">LESSON 21 (1)</span></div><h3>Lesson 21 (1)</h3><p>Mở bản thứ hai của Lesson 21.</p><a class="open-btn" href="Lesson%2021%20(1).html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 22"><div class="lesson-top"><span class="lesson-icon">📙</span><span class="tag">LESSON 22</span></div><h3>Lesson 22</h3><p>Mở file Lesson22.html.</p><a class="open-btn" href="Lesson22.html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 22 1"><div class="lesson-top"><span class="lesson-icon">📕</span><span class="tag">LESSON 22 (1)</span></div><h3>Lesson 22 (1)</h3><p>Mở bản thứ hai của Lesson 22.</p><a class="open-btn" href="Lesson22%20(1).html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 23"><div class="lesson-top"><span class="lesson-icon">📚</span><span class="tag">LESSON 23</span></div><h3>Lesson 23</h3><p>Mở file Lesson23.html.</p><a class="open-btn" href="Lesson23.html">Mở file ↗</a></article>
-<article class="lesson" data-search="lesson 22 my neighbourhood"><div class="lesson-top"><span class="lesson-icon">🏙️</span><span class="tag">LESSON 22</span></div><h3>My Neighbourhood</h3><p>Bài học về khu phố.</p><a class="open-btn" href="Tieng_Anh_6_Lesson_22_My_Neighbourhood.html">Mở file ↗</a></article>
+<div>
+<a class="nav-link" href="#archive">📂 Kho lưu trữ</a>
+<button id="themeBtn">🌙</button>
 </div>
-<div class="empty" id="empty">Không tìm thấy bài học. Vui lòng thử từ khóa khác nhé!</div>
-<details class="archive" id="archive"><summary>📂 Repository files navigation — tất cả file HTML</summary><div class="file-list">
-<a class="file-link" href="English6_Lesson_26.html">📄 English6_Lesson_26.html</a>
-<a class="file-link" href="English6_Lesson_27.html">📄 English6_Lesson_27.html</a>
-<a class="file-link" href="English6_Lesson_28.html">📄 English6_Lesson_28.html</a>
-<a class="file-link" href="English6_Lesson_30.html">📄 English6_Lesson_30.html</a>
-<a class="file-link" href="Index20.html">📄 Index20.html</a>
-<a class="file-link" href="Lesson%2021%20(1).html">📄 Lesson 21 (1).html</a>
-<a class="file-link" href="Lesson%2021.html">📄 Lesson 21.html</a>
-<a class="file-link" href="Lesson22%20(1).html">📄 Lesson22 (1).html</a>
-<a class="file-link" href="Lesson22.html">📄 Lesson22.html</a>
-<a class="file-link" href="Lesson23.html">📄 Lesson23.html</a>
-<a class="file-link" href="Tieng_Anh_6_Lesson_22_My_Neighbourhood.html">📄 Tieng_Anh_6_Lesson_22_My_Neighbourhood.html</a>
-<a class="file-link" href="h.html">📄 h.html</a>
-<a class="file-link" href="lesson24%20(1).html">📄 lesson24 (1).html</a>
-<a class="file-link" href="lesson24.html">📄 lesson24.html</a>
-<a class="file-link" href="lesson25_english6_interactive.html">📄 lesson25_english6_interactive.html</a>
-<a class="file-link" href="phieuthongbaosodaubai.html">📄 phieuthongbaosodaubai.html</a>
-<a class="file-link" href="sotheodoichoctapcoluyen.html">📄 sotheodoichoctapcoluyen.html</a>
-</div></details>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+<div>📚 ENGLISH 6 · GLOBAL SUCCESS</div>
+<h1>Kho bài học<br>tiếng Anh dành cho học sinh</h1>
+<p>Tìm bài học nhanh chóng và mở trực tiếp các file HTML trong repository.</p>
+<input class="search" id="search" type="search" placeholder="🔍 Tìm kiếm bài học...">
+</div>
+</section>
+
+<main>
+<div class="section-title">
+<div><h2>📘 Bài học</h2><p class="muted">Chọn bài học rồi bấm “Mở file”.</p></div>
+<span class="muted" id="count"></span>
+</div>
+
+<div class="grid" id="lessonGrid">
+
+<article class="lesson" data-search="lesson 30 review">
+<div class="lesson-top"><span class="lesson-icon">📝</span><span class="tag">LESSON 30</span></div>
+<h3>Review</h3><p>Ôn tập từ vựng, ngữ pháp và kỹ năng tiếng Anh.</p>
+<a class="open-btn" href="English6_Lesson_30.html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 28 natural wonders viet nam">
+<div class="lesson-top"><span class="lesson-icon">🏞️</span><span class="tag">LESSON 28</span></div>
+<h3>Natural Wonders of Viet Nam</h3><p>Từ vựng và ngữ pháp must / mustn't.</p>
+<a class="open-btn" href="English6_Lesson_28.html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 27 my neighbourhood">
+<div class="lesson-top"><span class="lesson-icon">🏘️</span><span class="tag">LESSON 27</span></div>
+<h3>My Neighbourhood · Part 1</h3><p>Từ vựng và tính từ so sánh hơn.</p>
+<a class="open-btn" href="English6_Lesson_27.html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 26 my neighbourhood">
+<div class="lesson-top"><span class="lesson-icon">🏡</span><span class="tag">LESSON 26</span></div>
+<h3>My Neighbourhood</h3><p>Từ vựng và tính từ so sánh hơn.</p>
+<a class="open-btn" href="English6_Lesson_26.html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="index 20">
+<div class="lesson-top"><span class="lesson-icon">📑</span><span class="tag">INDEX 20</span></div>
+<h3>Index 20</h3><p>Mở file Index20.html.</p>
+<a class="open-btn" href="Index20.html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 21">
+<div class="lesson-top"><span class="lesson-icon">📘</span><span class="tag">LESSON 21</span></div>
+<h3>Lesson 21</h3><p>Mở file Lesson 21.html.</p>
+<a class="open-btn" href="Lesson%2021.html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 21 1">
+<div class="lesson-top"><span class="lesson-icon">📗</span><span class="tag">LESSON 21 (1)</span></div>
+<h3>Lesson 21 (1)</h3><p>Bản thứ hai của Lesson 21.</p>
+<a class="open-btn" href="Lesson%2021%20(1).html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 22">
+<div class="lesson-top"><span class="lesson-icon">📙</span><span class="tag">LESSON 22</span></div>
+<h3>Lesson 22</h3><p>Mở file Lesson22.html.</p>
+<a class="open-btn" href="Lesson22.html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 22 1">
+<div class="lesson-top"><span class="lesson-icon">📕</span><span class="tag">LESSON 22 (1)</span></div>
+<h3>Lesson 22 (1)</h3><p>Bản thứ hai của Lesson 22.</p>
+<a class="open-btn" href="Lesson22%20(1).html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 23">
+<div class="lesson-top"><span class="lesson-icon">📚</span><span class="tag">LESSON 23</span></div>
+<h3>Lesson 23</h3><p>Mở file Lesson23.html.</p>
+<a class="open-btn" href="Lesson23.html">Mở file ↗</a>
+</article>
+
+<article class="lesson" data-search="lesson 22 my neighbourhood">
+<div class="lesson-top"><span class="lesson-icon">🏙️</span><span class="tag">LESSON 22</span></div>
+<h3>My Neighbourhood</h3><p>Bài học về khu phố.</p>
+<a class="open-btn" href="Tieng_Anh_6_Lesson_22_My_Neighbourhood.html">Mở file ↗</a>
+</article>
+
+</div>
+
+<div class="empty" id="empty">Không tìm thấy bài học. Hãy thử từ khóa khác!</div>
+
+<details class="archive" id="archive">
+<summary>📂 Repository files navigation — tất cả file HTML</summary>
+<div class="file-list">
+<a class="file-link" href="English6_Lesson_26.html">English6_Lesson_26.html</a>
+<a class="file-link" href="English6_Lesson_27.html">English6_Lesson_27.html</a>
+<a class="file-link" href="English6_Lesson_28.html">English6_Lesson_28.html</a>
+<a class="file-link" href="English6_Lesson_30.html">English6_Lesson_30.html</a>
+<a class="file-link" href="Index20.html">Index20.html</a>
+<a class="file-link" href="Lesson%2021%20(1).html">Lesson 21 (1).html</a>
+<a class="file-link" href="Lesson%2021.html">Lesson 21.html</a>
+<a class="file-link" href="Lesson22%20(1).html">Lesson22 (1).html</a>
+<a class="file-link" href="Lesson22.html">Lesson22.html</a>
+<a class="file-link" href="Lesson23.html">Lesson23.html</a>
+<a class="file-link" href="Tieng_Anh_6_Lesson_22_My_Neighbourhood.html">Tieng_Anh_6_Lesson_22_My_Neighbourhood.html</a>
+<a class="file-link" href="h.html">h.html</a>
+<a class="file-link" href="lesson24%20(1).html">lesson24 (1).html</a>
+<a class="file-link" href="lesson24.html">lesson24.html</a>
+<a class="file-link" href="lesson25_english6_interactive.html">lesson25_english6_interactive.html</a>
+<a class="file-link" href="phieuthongbaosodaubai.html">phieuthongbaosodaubai.html</a>
+<a class="file-link" href="sotheodoichoctapcoluyen.html">sotheodoichoctapcoluyen.html</a>
+</div>
+</details>
 </main>
-<footer>© tienganh.com · Kho bài học HTML dành cho thầy cô và học sinh ✨</footer>
+
+<footer>© 2026 tienganh.com · English 6 Global Success</footer>
+
 <script>
-const searchInput=document.getElementById("search");
+const search=document.getElementById("search");
 const cards=[...document.querySelectorAll(".lesson")];
 const count=document.getElementById("count");
 const empty=document.getElementById("empty");
-searchInput.addEventListener("input",()=>{
- const query=searchInput.value.trim().toLowerCase();let visible=0;
- cards.forEach(card=>{const matches=card.dataset.search.toLowerCase().includes(query);card.style.display=matches?"flex":"none";if(matches)visible++});
- count.textContent=visible+" bài học";empty.style.display=visible?"none":"block";
+
+function filterLessons(){
+const q=search.value.toLowerCase().trim();
+let visible=0;
+cards.forEach(card=>{
+const match=card.dataset.search.toLowerCase().includes(q)||card.innerText.toLowerCase().includes(q);
+card.style.display=match?"flex":"none";
+if(match)visible++;
 });
-const themeBtn=document.getElementById("themeBtn");
-if(localStorage.getItem("tienganh-theme")==="dark")document.body.classList.add("dark");
-function updateThemeButton(){themeBtn.textContent=document.body.classList.contains("dark")?"☀️":"🌙"}
-updateThemeButton();
-themeBtn.addEventListener("click",()=>{
- document.body.classList.toggle("dark");
- localStorage.setItem("tienganh-theme",document.body.classList.contains("dark")?"dark":"light");
- updateThemeButton();
+count.textContent=visible+" bài học";
+empty.style.display=visible?"none":"block";
+}
+search.addEventListener("input",filterLessons);
+filterLessons();
+
+document.getElementById("themeBtn").addEventListener("click",()=>{
+document.body.classList.toggle("dark");
+document.getElementById("themeBtn").textContent=document.body.classList.contains("dark")?"☀️":"🌙";
 });
 </script>
 </body>
